@@ -27,7 +27,7 @@ func _process(delta):
 		print("PEW")
 		print("1 in ", 1/delta)
 		var pew = shot.instantiate()
-		pew.global_position = global_position
+		pew.global_position = global_position + Vector2(50, 0)
 		pew.rotation = rotation
 		get_parent().add_child(pew)
 	var adjustment=Vector2(1, 0).rotated(rotation)

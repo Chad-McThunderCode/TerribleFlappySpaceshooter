@@ -4,15 +4,15 @@
 [ext_resource type="Script" path="res://shot_scene.gd" id="1_6kyqf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cy14r"]
-radius = 19.0
+radius = 11.0454
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_6kyqf")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("CircleShape2D_cy14r")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_4kmps")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_cy14r")

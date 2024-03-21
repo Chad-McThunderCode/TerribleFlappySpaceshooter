@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv7e548cvgj6j"]
+
+[ext_resource type="PackedScene" uid="uid://b04m2ubqsf0pj" path="res://evil_scene.tscn" id="1_k80cd"]
+[ext_resource type="PackedScene" uid="uid://ofu7aijaeq8c" path="res://ship_scene.tscn" id="2_hssy8"]
+[ext_resource type="PackedScene" uid="uid://cshnvwmbd6x3c" path="res://boss.tscn" id="3_0bjlf"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="evil_test" parent="." instance=ExtResource("1_k80cd")]
+position = Vector2(1000, 310)
+
+[node name="ship" parent="." instance=ExtResource("2_hssy8")]
+position = Vector2(147, 347)
+
+[node name="boss" parent="." instance=ExtResource("3_0bjlf")]
+position = Vector2(814, 252)

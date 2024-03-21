@@ -9,3 +9,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	global_position = global_position + Vector2(500*delta, 0).rotated(rotation)
+	if(global_position.x > 1500 or global_position.x < -100):
+		queue_free()
