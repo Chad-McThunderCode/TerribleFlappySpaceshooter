@@ -1,6 +1,7 @@
 extends Node2D
 
 var press_multiplier = 1
+var shot=preload("res://shot_scene.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,6 +22,15 @@ func _process(delta):
 			rotation = -0.3*PI
 		press_multiplier+=50*delta
 	#print("delta:", delta)
-	print(press_multiplier)
+	#print(press_multiplier)
 	if(randf() < delta):
 		print("PEW")
+		print("1 in ", 1/delta)
+		var pew = shot.instantiate()
+		pew.global_position = global_position
+		pew.rotation = rotation
+		get_parent().add_child(pew)
+	var adjustment=Vector2(1, 0).rotated(rotation)
+	if(adjustment.y > 0):
+		adjustment.y/=2
+	global_position+=Vector2(0, adjustment.y*10)
