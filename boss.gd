@@ -13,7 +13,7 @@ func _ready():
 		direction.y *= -1
 	#print(seg)
 	next_segment = seg.instantiate()
-	next_segment.pseudoConstructor(global_position, 0, self, self)
+	next_segment.pseudoConstructor(global_position, 15, self, self)
 	#print(segments)
 
 

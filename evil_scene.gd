@@ -17,7 +17,7 @@ func _process(delta):
 	if(washit):
 		global_position = Vector2(1300, randf()*600)
 		deaths+=1
-		if(deaths > 0):
+		if(deaths > 6):
 			deaths = -10000
 			b = boss.instantiate()
 			b.global_position = global_position
