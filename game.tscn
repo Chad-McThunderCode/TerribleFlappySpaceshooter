@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://b04m2ubqsf0pj" path="res://evil_scene.tscn" id="1_k80cd"]
 [ext_resource type="PackedScene" uid="uid://ofu7aijaeq8c" path="res://ship_scene.tscn" id="2_hssy8"]
-[ext_resource type="PackedScene" uid="uid://cshnvwmbd6x3c" path="res://boss.tscn" id="3_0bjlf"]
+[ext_resource type="PackedScene" uid="uid://n6er13j8p8wy" path="res://clutter.tscn" id="3_7lnqa"]
 
-[node name="Node2D" type="Node2D"]
+[node name="game" type="Node2D"]
 
 [node name="evil_test" parent="." instance=ExtResource("1_k80cd")]
 position = Vector2(1000, 310)
@@ -12,5 +12,66 @@ position = Vector2(1000, 310)
 [node name="ship" parent="." instance=ExtResource("2_hssy8")]
 position = Vector2(147, 347)
 
-[node name="boss" parent="." instance=ExtResource("3_0bjlf")]
-position = Vector2(814, 252)
+[node name="clutter1" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter2" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter3" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter4" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter5" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter6" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter7" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter8" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter9" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter10" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter11" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter12" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter13" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter14" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter15" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter16" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter17" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter18" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter19" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter20" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter21" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter22" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter23" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter24" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter25" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter26" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter27" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter28" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter29" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter30" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter31" parent="." instance=ExtResource("3_7lnqa")]
+
+[node name="clutter32" parent="." instance=ExtResource("3_7lnqa")]

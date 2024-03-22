@@ -1,8 +1,11 @@
 extends Node2D
 
 var shot=preload("res://shot_scene.tscn")
+var boss=preload("res://boss.tscn")
 var direction=Vector2(0, 1)
 var deaths=0
+var b
+var washit = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,6 +14,18 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if(washit):
+		global_position = Vector2(1300, randf()*600)
+		deaths+=1
+		if(deaths > 0):
+			deaths = -10000
+			b = boss.instantiate()
+			b.global_position = global_position
+			get_parent().add_child(b)
+			print("Spawned boss", b)
+			call_deferred("queue_free")
+		else:
+			washit=false
 	var before=global_position
 	global_position+=200*direction*delta
 	if(global_position.y < 0 or global_position.y > 600):
@@ -28,8 +43,4 @@ func _process(delta):
 
 
 func _on_area_2d_area_entered(area):
-	global_position = Vector2(1500, randf()*600)
-	deaths+=1
-	if(deaths > 9):
-		print("SPAWNING BOSS")
-		queue_free()
+	washit=true

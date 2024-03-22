@@ -5,8 +5,9 @@ var shot=preload("res://shot_scene.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("loaded in:", self)
-
+	var file = FileAccess.open("user://easter.dat", FileAccess.READ)
+	if(file and "yau" in file.get_as_text()):
+		get_node("Sprite2D").frame = 1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	press_multiplier-=5*delta
@@ -23,9 +24,8 @@ func _process(delta):
 		press_multiplier+=50*delta
 	#print("delta:", delta)
 	#print(press_multiplier)
+	#if(randf() < 0.5):
 	if(randf() < delta):
-		print("PEW")
-		print("1 in ", 1/delta)
 		var pew = shot.instantiate()
 		pew.global_position = global_position + Vector2(50, 0)
 		pew.rotation = rotation
@@ -34,3 +34,8 @@ func _process(delta):
 	if(adjustment.y > 0):
 		adjustment.y/=2
 	global_position+=Vector2(0, adjustment.y*10)
+
+
+func _on_area_2d_area_entered(area):
+	OS.delay_msec(1500)
+	get_tree().reload_current_scene()
